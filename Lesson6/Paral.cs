@@ -31,7 +31,7 @@ namespace Lesson6
         public override bool Equals(object obj)
         {
             //return base.Equals(obj);
-            if (obj.GetType() != this.GetType())
+            if (obj.GetType() != this.GetType())    //проверка на принадлежность к одному классу
             {
                 return false;
             }
@@ -45,7 +45,9 @@ namespace Lesson6
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            //return base.GetHashCode();
+            return X1 * Y1 * X2 * Y2;
+
         }
     }
 }
